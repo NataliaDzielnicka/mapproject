@@ -1,8 +1,33 @@
  <!DOCTYPE html>
 <html>
+ <head>
 <title>IN CONSTRUCTION</title>
+  <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  </head>
 <body>
-<iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-80.27262568473817%2C26.301052081707564%2C-80.26949286460878%2C26.308034661828042&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/26.304543/-80.271059">View Larger Map</a></small>
+
+ <div id =”my-map” style = “width:800px; height:600px;”>
+  <iframe width="425" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=-80.27262568473817%2C26.301052081707564%2C-80.26949286460878%2C26.308034661828042&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/26.304543/-80.271059">View Larger Map</a></small>
+<script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+ </div>
+
+
+ <script>
+ // Creating map options
+ var mapOptions = {
+ center: [17.385044, 78.486671],
+ zoom: 10
+ }
+ 
+ // Creating a map object
+ var map = new L.map(‘map’, mapOptions);
+ 
+ // Creating a Layer object
+ var layer = new     L.TileLayer(‘http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png’);
+ 
+ // Adding layer to the map
+ map.addLayer(layer);
+ </script>
 
 </body>
 </html> 
